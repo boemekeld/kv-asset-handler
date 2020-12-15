@@ -91,7 +91,9 @@ function serveSinglePageApp(request: Request, options?: Partial<Options>): Reque
  * @param {any} [options.ASSET_MANIFEST] the map of the key to cache and store in KV
  * */
 const getAssetFromKV = async (event: FetchEvent, options?: Partial<Options>): Promise<Response> => {
-  options = assignOptions(options);
+  console.log('getAssetFromKV')
+  console.log(options)
+  options = assignOptions(options)
 
   const request = event.request
   const ASSET_NAMESPACE = options.ASSET_NAMESPACE
