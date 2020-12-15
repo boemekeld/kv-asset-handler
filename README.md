@@ -181,7 +181,7 @@ If you are serving a static site and would like to use extensionless HTML files 
 
 type: string
 
-This is the default document that will be used for requests ends in `'/'` or without a valid mime type like `'/about'` or `'/about.me'`. The default value is `'index.html'`.
+This is the default document that will be concatenated for requests ends in `'/'` or without a valid mime type like `'/about'` or `'/about.me'`. The default value is `'index.html'`.
 
 # Helper functions
 
