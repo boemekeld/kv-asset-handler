@@ -13,7 +13,7 @@ const defaultCacheControl: CacheControl = {
 
 function assignOptions(options?: Partial<Options>): Options {
   // Assign any missing options passed in to the default
-  options = Object.assign(
+  return Object.assign(
     {
       ASSET_NAMESPACE: __STATIC_CONTENT,
       ASSET_MANIFEST: __STATIC_CONTENT_MANIFEST,
