@@ -7,7 +7,7 @@ export declare type Options = {
     cacheControl: ((req: Request) => Partial<CacheControl>) | Partial<CacheControl>;
     ASSET_NAMESPACE: any;
     ASSET_MANIFEST: Object | string;
-    mapRequestToAsset: (req: Request) => Request;
+    mapRequestToAsset: (req: Request, options?: Partial<Options>) => Request;
     defaultMimeType: string;
     defaultDocument: string;
 };

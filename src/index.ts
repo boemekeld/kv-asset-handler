@@ -63,7 +63,7 @@ function serveSinglePageApp(request: Request, options?: Partial<Options>): Reque
 
   // First apply the default handler, which already has logic to detect
   // paths that should map to HTML files.
-  request = mapRequestToAsset(request)
+  request = mapRequestToAsset(request, options)
 
   const parsedUrl = new URL(request.url)
 
@@ -119,7 +119,7 @@ const getAssetFromKV = async (event: FetchEvent, options?: Partial<Options>): Pr
     pathIsEncoded = true;
     requestKey = request
   } else {
-    requestKey = options.mapRequestToAsset(request)
+    requestKey = options.mapRequestToAsset(request, options)
   }
 
   const parsedUrl = new URL(requestKey.url)

@@ -92,7 +92,7 @@ function serveSinglePageApp(request, options) {
     options = assignOptions(options);
     // First apply the default handler, which already has logic to detect
     // paths that should map to HTML files.
-    request = mapRequestToAsset(request);
+    request = mapRequestToAsset(request, options);
     var parsedUrl = new URL(request.url);
     // Detect if the default handler decided to map to
     // a HTML file in some specific directory.
@@ -149,7 +149,7 @@ var getAssetFromKV = function (event, options) { return __awaiter(void 0, void 0
                     requestKey = request;
                 }
                 else {
-                    requestKey = options.mapRequestToAsset(request);
+                    requestKey = options.mapRequestToAsset(request, options);
                 }
                 parsedUrl = new URL(requestKey.url);
                 pathname = pathIsEncoded ? decodeURIComponent(parsedUrl.pathname) : parsedUrl.pathname // decode percentage encoded path only when necessary
