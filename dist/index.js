@@ -123,8 +123,6 @@ var getAssetFromKV = function (event, options) { return __awaiter(void 0, void 0
     return __generator(this, function (_a) {
         switch (_a.label) {
             case 0:
-                console.log('getAssetFromKV');
-                console.log(options);
                 options = assignOptions(options);
                 request = event.request;
                 ASSET_NAMESPACE = options.ASSET_NAMESPACE;
