@@ -46,7 +46,7 @@ const mapRequestToAsset = (request: Request, options?: Partial<Options>) => {
   } else if (!mime.getType(pathname)) {
     // If path doesn't look like valid content
     //  e.g. /about.me ->  /about.me/index.html
-    pathname = pathname.concat(options.defaultDocument)
+    pathname = pathname.concat('/' + options.defaultDocument)
   }
 
   parsedUrl.pathname = pathname
