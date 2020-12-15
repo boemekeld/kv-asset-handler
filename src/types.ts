@@ -8,7 +8,8 @@ export type Options = {
   ASSET_NAMESPACE: any
   ASSET_MANIFEST: Object | string
   mapRequestToAsset: (req: Request) => Request,
-  defaultMimeType: string
+  defaultMimeType: string,
+  defaultDocument: string
 }
 
 export class KVError extends Error {
